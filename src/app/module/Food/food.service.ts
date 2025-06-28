@@ -19,8 +19,8 @@ const createFoodIntoDb = async (payload: TFood, file: any) => {
   return result;
 };
 
-const getAllFoodFronDb = async (query: Record<string, unknown>) => {
-  const result = await Food.find(query);
+const getAllFoodFronDb = async () => {
+  const result = await Food.find();
   return result;
 };
 

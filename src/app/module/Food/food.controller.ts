@@ -21,7 +21,7 @@ const createFood = async (req: Request, res: Response) => {
 
 const getAllFood = async (req: Request, res: Response) => {
   try {
-    const result = await FoodService.getAllFoodFronDb(req.query);
+    const result = await FoodService.getAllFoodFronDb();
     res.status(200).json({
       success: true,
       message: "Food retrived successfully!",
