@@ -5,7 +5,12 @@ import { CategoryRoute } from "./app/module/Category/category.route";
 import { FoodRoute } from "./app/module/Food/food.route";
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://antopolis-resturant.vercel.app",
+    credentials: true,
+  })
+);
 
 // application route
 app.use("/api/category", CategoryRoute);
